@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Bühne AR Vorschau</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    model-viewer {
+      width: 100%;
+      max-width: 800px;
+      height: 80vh;
+    }
+  </style>
+</head>
+<body>
+
+<model-viewer
+  src="BuehneAR.glb"
+  ios-src="BuehneAR.usdz"
+  alt="3D-Modell Bühne"
+  ar
+  ar-modes="scene-viewer quick-look webxr"
+  camera-controls
+  auto-rotate
+  ar-scale="fixed">
+</model-viewer>
+
+</body>
+</html>
