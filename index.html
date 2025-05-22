@@ -13,9 +13,14 @@
     <a-scene embedded arjs="sourceType: webcam; videoTexture: true;" renderer="logarithmicDepthBuffer: true;" vr-mode-ui="enabled: false">
 
       <!-- Lichtquellen -->
-      <a-entity light="type: ambient; intensity: 1.5"></a-entity>
-      <a-entity light="type: directional; intensity: 0.8" position="-2 3 -2"></a-entity>
+      <!-- Ambient Light (Grundhelligkeit) -->
+      <a-entity light="type: ambient; intensity: 1.5; color: #ffffff"></a-entity>
 
+      <!-- Richtungslichter (von drei Seiten) -->
+      <a-entity light="type: directional; intensity: 1.2; color: #ffffff" position="3 4 2"></a-entity> <!-- von rechts oben -->
+      <a-entity light="type: directional; intensity: 1.0; color: #ffffff" position="-3 4 -2"></a-entity> <!-- von links oben -->
+      <a-entity light="type: directional; intensity: 0.8; color: #ffffff" position="0 4 -4"></a-entity> <!-- von vorne oben -->
+      
       <!-- Marker mit Test-Würfel (sichtbar) und Modell -->
       <a-marker type="pattern" url="pattern-MBO_marker_rot.patt">
 
